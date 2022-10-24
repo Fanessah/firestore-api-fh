@@ -7,7 +7,8 @@ import { getFirestore} from "firebase-admin/firestore";
 import serviceAccount from "../secrets.js"; // we can only create this line after we create the private key in firestore  and drag it into "secrets" 
 //then ensure it is in your git ignore and secrets.js should be grayed out . rename it secrets.js becuase it doesnt start like that . add export default in secrets 
 
-export default function dbConnect() { // preparing our function to connect to the database // another default set up 
+export default function dbConnect() { // preparing our function to connect to the database 
+    //default set up 
 if(!getApps().length) {
     initializeApp({
         credential: cert(serviceAccount)
